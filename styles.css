@@ -183,6 +183,41 @@ main {
 /* section heading "Inbox" is 20px */
 main h1 {
     font-size: 20px;
+    margin: 24px 24px 8px;
+}
+
+/* task list: no bullets, a line under each item */
+.task-list {
+    list-style: none;
+    margin: 0;
+    padding: 0 24px;
+}
+
+.task-list li {
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    align-items: center;
+    column-gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #ececec;
+}
+
+/* circular checkbox */
+.task-list input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    border: 1px solid #c4c4c4;
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+/* checked state is a filled center, like a radio button */
+.task-list input[type="checkbox"]:checked {
+    border-color: #000000;
+    background-image: radial-gradient(circle, #000000 42%, #ffffff 46%);
 }
 
 /* responsive styles */
