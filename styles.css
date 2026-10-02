@@ -127,16 +127,45 @@ input {
     color: #000000;
 }
 
+/* unordered list of views: Inbox 5, Today 5, Upcoming with no count */
+#sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+}
+
 #sidebar a {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 24px;
+    justify-content: start;
+    align-items: center;
+    column-gap: 8px;
+    padding: 8px 16px;
     color: #000000;
     text-decoration: none;
 }
 
-/* empty sidebar icons otherwise default to a large size and stretch each item */
+/* provided sidebar icons */
 #sidebar svg {
     display: block;
     width: 24px;
     height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.inbox-icon {
+    background-image: url("assets/inbox_icon.png");
+}
+
+.today-icon {
+    background-image: url("assets/calendar_icon.png");
+}
+
+.upcoming-icon {
+    background-image: url("assets/upcoming_icon.png");
 }
 
 /* task counts use #7e7d79, smaller than the item names */
@@ -149,6 +178,11 @@ input {
 main {
     background-color: #ffffff;
     color: #000000;
+}
+
+/* section heading "Inbox" is 20px */
+main h1 {
+    font-size: 20px;
 }
 
 /* responsive styles */
