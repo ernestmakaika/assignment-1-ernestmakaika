@@ -38,7 +38,7 @@ input {
 
 /*header styles*/
 /* red bar spans both columns; menu, search, and the task counter share one row */
-.app-header {
+.main-header {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: auto auto 1fr;
@@ -60,7 +60,7 @@ input {
 }
 
 /* shared size for the menu, search, and check icons */
-.app-header svg {
+.main-header svg {
     display: block;
     width: 18px;
     height: 18px;
@@ -122,19 +122,19 @@ input {
 
 /* navigation styles */
 /* sidebar background #fefbf2 and item text #000000 */
-#sidebar {
+.sidebar {
     background-color: #fefbf2;
     color: #000000;
 }
 
 /* unordered list of views: Inbox 5, Today 5, Upcoming with no count */
-#sidebar ul {
+.sidebar ul {
     list-style: none;
     margin: 0;
     padding: 8px 0;
 }
 
-#sidebar a {
+.sidebar a {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 24px;
@@ -147,7 +147,7 @@ input {
 }
 
 /* provided sidebar icons */
-#sidebar svg {
+.sidebar svg {
     display: block;
     width: 24px;
     height: 24px;
@@ -169,19 +169,19 @@ input {
 }
 
 /* task counts use #7e7d79, smaller than the item names */
-#sidebar .count {
+.sidebar .count {
     color: #7e7d79;
     font-size: 12px;
 }
 
 /* main content stays on the same white and black scheme */
-main {
+.main-content {
     background-color: #ffffff;
     color: #000000;
 }
 
 /* section heading "Inbox" is 20px */
-main h1 {
+.main-content h1 {
     font-size: 20px;
     margin: 24px 24px 8px;
 }
@@ -227,7 +227,7 @@ main h1 {
         grid-template-columns: 1fr;
     }
 
-    #sidebar {
+    .sidebar {
         display: none;
     }
 }
