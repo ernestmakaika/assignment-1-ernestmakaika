@@ -1,9 +1,80 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Link your CSS file and other references here -->
+        <!-- link to  CSS file -->
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <!-- Content goes here -->
+        <!-- top bar -->
+        <header class="app-header">
+            <button type="button" class="menu-toggle"
+                    aria-label="Toggle sidebar" aria-expanded="true" aria-controls="sidebar">
+            <svg aria-hidden="true"><!-- hamburger icon --></svg>
+            </button>  
+            <form role="search" class="quick-find"> <!-- search bar -->
+            <label for="quick-find" class="visually-hidden">Quick Find</label>
+            <svg aria-hidden="true"><!-- search icon --></svg>
+            <input type="search" id="quick-find" placeholder="Quick find">
+            </form>
+        
+            <a href="/productivity" class="productivity">
+            <svg aria-hidden="true"><!-- check icon --></svg>
+            <span aria-hidden="true">30/5</span>
+            </a>
+        </header>
+        
+        <!-- sidemenu items -->
+        <nav id="sidebar" aria-label="Views">
+            <!--  use unordered list to list the sidebar items -->
+            <ul>
+                <li>
+                <a href="/inbox" aria-current="page">
+                    <svg aria-hidden="true"><!-- inbox icon --></svg>
+                    Inbox <span class="count">5<span class="visually-hidden"> tasks</span></span>
+                </a>
+                </li>
+                <li>
+                <a href="/today">
+                    <svg aria-hidden="true"><!-- calendar icon --></svg>
+                    Today <span class="count">5<span class="visually-hidden"> tasks</span></span>
+                </a>
+                </li>
+                <li>
+                <a href="/upcoming">
+                    <svg aria-hidden="true"><!-- grid calendar icon --></svg>
+                    Upcoming
+                </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- task list items -->
+        <main>
+            <section>
+                <h1>Inbox</h1>
+                <ul class="task-list">
+                    <li>
+                    <input type="checkbox" id="task-1">
+                    <label for="task-1">Call Mom</label>
+                    </li>
+                    <li>
+                    <input type="checkbox" id="task-2">
+                    <label for="task-2">Buy the new issue of Scientific American</label>
+                    </li>
+                    <li>
+                    <input type="checkbox" id="task-3">
+                    <label for="task-3">Return the textbook to Josie</label>
+                    </li>
+                    <li>
+                    <input type="checkbox" id="task-4">
+                    <label for="task-4">Buy the new album by Rake</label>
+                    </li>
+                    <li>
+                    <input type="checkbox" id="task-5">
+                    <label for="task-5">Buy a gift card for Dad</label>
+                    </li>
+                </ul>
+            </section>
+        </main>
     </body>
 </html>
